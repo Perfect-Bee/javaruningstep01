@@ -4,7 +4,6 @@ public class Main {
         // = [Garen] [garen] = [new] [Garen()];
         Garen garen = new Garen("garen1", 1, 100, 50, 30); // 고정값 1, 100, 50, 30
         Garen garen2 = new Garen("garen2", 1, 100, 50, 30); // 고정값 1, 100, 50, 30
-
         Ashe ashe = new Ashe("ashe", 1, 80, 60, 10);
 
 
@@ -24,7 +23,7 @@ public class Main {
         ashe.basicAttackToGaren(garen);
 
         // 가렌이 에쉬를 R 스킬 공격 : skillRAttackToAshe(Ashe target)
-        garen.skillRAttackToAshe(ashe);
+        // garen.useR(ashe);
 
 
         // 체력 정리
