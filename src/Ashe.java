@@ -6,19 +6,27 @@ public class Ashe extends Champion {
         super(name, level, hp, attackDamage, defence);
     }
 
-    // 타격량 : 에쉬가 가렌을 공격했다.
-    public void basicAttackToGaren(Garen target){
-        // this는 상속받은거니 super로 바꾸고, name도 public에서 써야하니 getName이다.
-        System.out.println("[ " + getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "을(를) 기본 공격!");
-        target.takeDamage(super.getAttackDamage());
-    }
-
-    @Override // @은 문법임. 정의.
-    public void useQ(){
+    @Override
+    public void useQ(Champion target){
         // 에쉬만의 Q 스킬
+        System.out.println(getName() + "의 Q스킬!");
+        target.takeDamage(getAttackDamage() * 2); // 공격력의 200%
+        // 주의. 이거 int라서 실수 안 됨
     }
-    public void useW(){}
-    public void useE(){}
-    public void useR(){}
+    public void useW(Champion target){
+        // 에쉬만의 W 스킬
+        System.out.println(getName() + "의 W스킬!");
+        target.takeDamage(getAttackDamage() * 3); // 공격력의 300%
+    }
+    public void useE(Champion target){
+        // 에쉬만의 E 스킬
+        System.out.println(getName() + "의 E스킬!");
+        target.takeDamage(getAttackDamage() * 4);
+    }
+    public void useR(Champion target){
+        // 에쉬만의 R 스킬
+        System.out.println(getName() + "의 R스킬!");
+        target.takeDamage(getAttackDamage() * 5);
+    }
 
 }

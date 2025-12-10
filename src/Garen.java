@@ -7,18 +7,27 @@ public class Garen extends Champion {
         super(name, level, hp, attackDamage, defence);
     }
 
-
-    // 타격량 : 가렌이 에쉬를 공격했다.
-    public void basicAttackToAshe(Ashe target){
-        System.out.println("[ " + super.getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "을(를) 기본 공격!");
-        target.takeDamage(super.getAttackDamage());
-    }
-
     // 스킬 : 내부 로직은 알아서 채우기
     @Override
-    public void useQ(){}
-    public void useW(){}
-    public void useE(){}
-    public void useR(){}
+    public void useQ(Champion target){
+        // 가렌만의 Q 스킬
+        System.out.println(getName() + "의 Q스킬!");
+        target.takeDamage(getAttackDamage() + 30); // Q스킬은 가렌의 기본 공격력 + 30
+    }
+    public void useW(Champion target){
+        // 가렌만의 W 스킬
+        System.out.println(getName() + "의 W스킬!");
+        target.takeDamage(getAttackDamage() + 60); // Q스킬은 가렌의 기본 공격력 + 30
+    }
+    public void useE(Champion target){
+        // 가렌만의 E 스킬
+        System.out.println(getName() + "의 E스킬!");
+        target.takeDamage(getAttackDamage() + 90); // Q스킬은 가렌의 기본 공격력 + 30
+    }
+    public void useR(Champion target){
+        // 가렌만의 R 스킬
+        System.out.println(getName() + "의 R스킬!");
+        target.takeDamage(getAttackDamage() + 120); // Q스킬은 가렌의 기본 공격력 + 30
+    }
 
 }

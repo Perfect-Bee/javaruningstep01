@@ -7,23 +7,18 @@ public class Main {
         Ashe ashe = new Ashe("ashe", 1, 80, 60, 10);
 
 
-        // 가렌에게 데미지 40을 줘보자(garen과 garen2는 서로 다르다.)
-        garen.takeDamage(40);   // 데미지 10(40 - 10), 체력 90
-        garen.takeDamage(30);   // 데미지 0(30-30), 체력 90
-
-
         // 이름 변경
         garen.changeName("가붕이");
         garen2.changeName("짭붕이");
         ashe.changeName("에붕이");
 
         // 가렌이 에쉬를 공격함 : basicAttackToAshe(Ashe target)
-        garen.basicAttackToAshe(ashe);
+        garen.basicAttack(ashe);
         // 에쉬가 가렌을 공격함 basicAttackToGaren(Garen target)
-        ashe.basicAttackToGaren(garen);
+        ashe.basicAttack(garen);
 
         // 가렌이 에쉬를 R 스킬 공격 : skillRAttackToAshe(Ashe target)
-        // garen.useR(ashe);
+        garen.useR(ashe);
 
 
         // 체력 정리

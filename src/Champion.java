@@ -23,7 +23,7 @@ public abstract class Champion {
         this.hp -= actualDamage;
 
         System.out.println("[ " + this.name + " ]" + "이(가) " + actualDamage + " 피해를 받았습니다!");
-        System.out.println("현재 체력: " + this.hp);
+        System.out.println("현재 체력: " + this.hp + "\n");
     }
 
     // 체력
@@ -32,16 +32,22 @@ public abstract class Champion {
     public String getName(){return this.name;}
     // 이름 변경
     public void changeName(String name){
-        // 현재 설정된 이름(private 씌운)에 name 덮어쓰기
+        String name2 = this.name;
         this.name = name;
-        System.out.println("변경된 이름은 : " + this.name);
+        System.out.println(name2 + "에서 변경된 이름은 : " + this.name);
     }
     // 공격력
     public int getAttackDamage(){return this.attackDamage;}
 
     // 스킬
-    public abstract void useQ();
-    public abstract void useW();
-    public abstract void useE();
-    public abstract void useR();
+    public abstract void useQ(Champion target);
+    public abstract void useW(Champion target);
+    public abstract void useE(Champion target);
+    public abstract void useR(Champion target);
+
+    // 타격량 : [때리는 얘].basicAttack([맞는 얘])
+    public void basicAttack(Champion target){
+        System.out.println("[ " + getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "을(를) 기본 공격!");
+        target.takeDamage(this.attackDamage);
+    }
 }
