@@ -6,7 +6,6 @@ public class Main {
         Garen garen2 = new Garen("garen2", 1, 100, 50, 30); // 고정값 1, 100, 50, 30
         Ashe ashe = new Ashe("ashe", 1, 80, 60, 10);
 
-
         // 이름 변경
         garen.changeName("가붕이");
         garen2.changeName("짭붕이");
@@ -25,5 +24,10 @@ public class Main {
         System.out.println(garen.getName() + " 체력 : " + garen.getHp() + " \n"
                  + garen2.getName() + " 체력 : " + garen2.getHp() + " \n"
                  + ashe.getName() + " 체력 : " + ashe.getHp());
+
+        // 가붕이 레밸업
+        System.out.println("\n" + garen.getName() + "이(가) 레밸업 하였습니다!");
+        garen.levelUp(garen);
+
     }
 }

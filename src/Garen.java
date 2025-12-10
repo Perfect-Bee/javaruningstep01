@@ -11,22 +11,22 @@ public class Garen extends Champion {
     @Override
     public void useQ(Champion target){
         // 가렌만의 Q 스킬
-        System.out.println(getName() + "의 Q스킬!");
+        System.out.println("[ " + getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "에게 Q스킬!");
         target.takeDamage(getAttackDamage() + 30); // Q스킬은 가렌의 기본 공격력 + 30
     }
     public void useW(Champion target){
         // 가렌만의 W 스킬
-        System.out.println(getName() + "의 W스킬!");
+        System.out.println("[ " + getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "에게 W스킬!");
         target.takeDamage(getAttackDamage() + 60); // Q스킬은 가렌의 기본 공격력 + 30
     }
     public void useE(Champion target){
         // 가렌만의 E 스킬
-        System.out.println(getName() + "의 E스킬!");
+        System.out.println("[ " + getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "에게 E스킬!");
         target.takeDamage(getAttackDamage() + 90); // Q스킬은 가렌의 기본 공격력 + 30
     }
     public void useR(Champion target){
         // 가렌만의 R 스킬
-        System.out.println(getName() + "의 R스킬!");
+        System.out.println("[ " + getName() + " ]" + "이(가) " + "[ " + target.getName() + " ]" + "에게 R스킬!");
         target.takeDamage(getAttackDamage() + 120); // Q스킬은 가렌의 기본 공격력 + 30
     }
 
